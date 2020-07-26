@@ -56,6 +56,7 @@
 		755A2BA924CE07B100ACCA2A /* gonet-exam */ = {
 			isa = PBXGroup;
 			children = (
+				755A2BBE24CE094D00ACCA2A /* utilities */,
 				755A2BAA24CE07B100ACCA2A /* AppDelegate.swift */,
 				755A2BAC24CE07B100ACCA2A /* SceneDelegate.swift */,
 				755A2BAE24CE07B100ACCA2A /* ViewController.swift */,
@@ -65,6 +66,13 @@
 				755A2BB824CE07B400ACCA2A /* Info.plist */,
 			);
 			path = "gonet-exam";
+			sourceTree = "<group>";
+		};
+		755A2BBE24CE094D00ACCA2A /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
