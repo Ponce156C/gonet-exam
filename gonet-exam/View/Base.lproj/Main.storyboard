@@ -51,7 +51,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videogamesView" id="fkI-gj-0c6">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videogamesView" id="fkI-gj-0c6" customClass="VideoGamesController" customModule="gonet_exam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="5.5" width="417" height="726"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yAh-Eb-Car">
@@ -62,7 +62,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="417" height="726"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="g5B-Mg-IbL">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="g5B-Mg-IbL" customClass="VideoGamesCellController" customModule="gonet_exam" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="417" height="105"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g5B-Mg-IbL" id="Sis-9W-3aG">
@@ -101,8 +101,17 @@
                                                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6Q8-0l-NjU" secondAttribute="bottom" constant="25" id="o17-4K-Md2"/>
                                                                 </constraints>
                                                             </tableViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="img" destination="X5b-to-6Q3" id="nqJ-7V-SQC"/>
+                                                                <outlet property="shortDescription" destination="6Q8-0l-NjU" id="a5y-ek-cRa"/>
+                                                                <outlet property="title" destination="3cI-0R-H4D" id="ctT-3p-Ca4"/>
+                                                            </connections>
                                                         </tableViewCell>
                                                     </prototypes>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="fkI-gj-0c6" id="Xbt-0A-9K8"/>
+                                                        <outlet property="delegate" destination="fkI-gj-0c6" id="jl3-TZ-Pma"/>
+                                                    </connections>
                                                 </tableView>
                                             </subviews>
                                             <constraints>
@@ -113,6 +122,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="417" height="726"/>
+                                        <connections>
+                                            <outlet property="videoGamesTableView" destination="TtE-WN-9dg" id="vxq-3t-fel"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="threadsView" id="4Oq-el-edP">
                                         <rect key="frame" x="427" y="17.5" width="384" height="702"/>

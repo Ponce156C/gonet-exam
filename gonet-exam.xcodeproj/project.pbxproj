@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		755A2BB424CE07B400ACCA2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755A2BB324CE07B400ACCA2A /* Assets.xcassets */; };
 		755A2BB724CE07B400ACCA2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755A2BB524CE07B400ACCA2A /* LaunchScreen.storyboard */; };
 		755A2BC224CE14B100ACCA2A /* PresentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A2BC124CE14B100ACCA2A /* PresentedController.swift */; };
+		75D153BA24CE235000BFE082 /* VideoGamesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D153B924CE235000BFE082 /* VideoGamesController.swift */; };
+		75FD8FEB24CE251D00C573E5 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD8FEA24CE251D00C573E5 /* Document.swift */; };
+		75FD8FED24CE258800C573E5 /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD8FEC24CE258800C573E5 /* protocols.swift */; };
+		75FD8FEF24CE268200C573E5 /* VideoGamesCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD8FEE24CE268200C573E5 /* VideoGamesCellController.swift */; };
+		75FD8FF124CE284400C573E5 /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD8FF024CE284400C573E5 /* utilities.swift */; };
+		75FD8FF424CE291C00C573E5 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 75FD8FF324CE291C00C573E5 /* Nuke */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,11 @@
 		755A2BB624CE07B400ACCA2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		755A2BB824CE07B400ACCA2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		755A2BC124CE14B100ACCA2A /* PresentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedController.swift; sourceTree = "<group>"; };
+		75D153B924CE235000BFE082 /* VideoGamesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGamesController.swift; sourceTree = "<group>"; };
+		75FD8FEA24CE251D00C573E5 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		75FD8FEC24CE258800C573E5 /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
+		75FD8FEE24CE268200C573E5 /* VideoGamesCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGamesCellController.swift; sourceTree = "<group>"; };
+		75FD8FF024CE284400C573E5 /* utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75FD8FF424CE291C00C573E5 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +68,7 @@
 		755A2BA924CE07B100ACCA2A /* gonet-exam */ = {
 			isa = PBXGroup;
 			children = (
+				75FD8FE924CE243C00C573E5 /* Model */,
 				755A2BBE24CE094D00ACCA2A /* Utilities */,
 				755A2BBF24CE0F3700ACCA2A /* Home */,
 				755A2BC024CE12F200ACCA2A /* View */,
@@ -70,6 +83,8 @@
 		755A2BBE24CE094D00ACCA2A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				75FD8FEC24CE258800C573E5 /* protocols.swift */,
+				75FD8FF024CE284400C573E5 /* utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -77,9 +92,9 @@
 		755A2BBF24CE0F3700ACCA2A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				755A2BC124CE14B100ACCA2A /* PresentedController.swift */,
 				755A2BC324CE20DD00ACCA2A /* ThreadList */,
 				755A2BC424CE20F500ACCA2A /* VideoGamesList */,
-				755A2BC124CE14B100ACCA2A /* PresentedController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -103,8 +118,18 @@
 		755A2BC424CE20F500ACCA2A /* VideoGamesList */ = {
 			isa = PBXGroup;
 			children = (
+				75D153B924CE235000BFE082 /* VideoGamesController.swift */,
+				75FD8FEE24CE268200C573E5 /* VideoGamesCellController.swift */,
 			);
 			path = VideoGamesList;
+			sourceTree = "<group>";
+		};
+		75FD8FE924CE243C00C573E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75FD8FEA24CE251D00C573E5 /* Document.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +148,9 @@
 			dependencies = (
 			);
 			name = "gonet-exam";
+			packageProductDependencies = (
+				75FD8FF324CE291C00C573E5 /* Nuke */,
+			);
 			productName = "gonet-exam";
 			productReference = 755A2BA724CE07B100ACCA2A /* gonet-exam.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 755A2B9E24CE07B100ACCA2A;
+			packageReferences = (
+				75FD8FF224CE291C00C573E5 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 755A2BA824CE07B100ACCA2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -179,8 +210,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				755A2BC224CE14B100ACCA2A /* PresentedController.swift in Sources */,
+				75D153BA24CE235000BFE082 /* VideoGamesController.swift in Sources */,
 				755A2BAB24CE07B100ACCA2A /* AppDelegate.swift in Sources */,
+				75FD8FED24CE258800C573E5 /* protocols.swift in Sources */,
 				755A2BAD24CE07B100ACCA2A /* SceneDelegate.swift in Sources */,
+				75FD8FEB24CE251D00C573E5 /* Document.swift in Sources */,
+				75FD8FF124CE284400C573E5 /* utilities.swift in Sources */,
+				75FD8FEF24CE268200C573E5 /* VideoGamesCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75FD8FF224CE291C00C573E5 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75FD8FF324CE291C00C573E5 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75FD8FF224CE291C00C573E5 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 755A2B9F24CE07B100ACCA2A /* Project object */;
 }
