@@ -10,22 +10,22 @@ import UIKit
 
 class PresentedController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var tableSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var tableSegmentedCollectionView: UICollectionView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var segmentedCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableSegmentedCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .right, animated: true)
-        tableSegmentedControl.selectedSegmentIndex = 0
+        segmentedCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .right, animated: true)
+        segmentedControl.selectedSegmentIndex = 0
     }
     
     @IBAction func segmentedSectionDidChange(_ sender: UISegmentedControl) {
-        switch tableSegmentedControl.selectedSegmentIndex {
+        switch segmentedControl.selectedSegmentIndex {
             case 0:
-                tableSegmentedCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .right, animated: true)
+                segmentedCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .right, animated: true)
             case 1:
-                tableSegmentedCollectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .left, animated: true)
+                segmentedCollectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .left, animated: true)
             default:
                 break
         }

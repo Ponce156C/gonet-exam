@@ -77,6 +77,8 @@
 		755A2BBF24CE0F3700ACCA2A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				755A2BC324CE20DD00ACCA2A /* ThreadList */,
+				755A2BC424CE20F500ACCA2A /* VideoGamesList */,
 				755A2BC124CE14B100ACCA2A /* PresentedController.swift */,
 			);
 			path = Home;
@@ -89,6 +91,20 @@
 				755A2BB024CE07B100ACCA2A /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		755A2BC324CE20DD00ACCA2A /* ThreadList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThreadList;
+			sourceTree = "<group>";
+		};
+		755A2BC424CE20F500ACCA2A /* VideoGamesList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VideoGamesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
