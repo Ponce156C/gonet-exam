@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5DFCDFE787C8B27AA52E1CE7 /* Pods_gonet_exam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E87359272C740E9271EB87D /* Pods_gonet_exam.framework */; };
+		750F57CF24CE476300E45E28 /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750F57CE24CE476300E45E28 /* DetailsController.swift */; };
 		755A2BAB24CE07B100ACCA2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A2BAA24CE07B100ACCA2A /* AppDelegate.swift */; };
 		755A2BAD24CE07B100ACCA2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A2BAC24CE07B100ACCA2A /* SceneDelegate.swift */; };
 		755A2BB224CE07B100ACCA2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755A2BB024CE07B100ACCA2A /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		1B82787533DE41DE5F050FCE /* Pods-gonet-exam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gonet-exam.debug.xcconfig"; path = "Target Support Files/Pods-gonet-exam/Pods-gonet-exam.debug.xcconfig"; sourceTree = "<group>"; };
 		3E87359272C740E9271EB87D /* Pods_gonet_exam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gonet_exam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		750F57CE24CE476300E45E28 /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
 		755A2BA724CE07B100ACCA2A /* gonet-exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gonet-exam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		755A2BAA24CE07B100ACCA2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		755A2BAC24CE07B100ACCA2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		750F57CD24CE46FA00E45E28 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				750F57CE24CE476300E45E28 /* DetailsController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		755A2B9E24CE07B100ACCA2A = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 			children = (
 				75FD8FE924CE243C00C573E5 /* Model */,
 				755A2BBE24CE094D00ACCA2A /* Utilities */,
+				750F57CD24CE46FA00E45E28 /* Details */,
 				755A2BBF24CE0F3700ACCA2A /* Home */,
 				755A2BC024CE12F200ACCA2A /* View */,
 				755A2BAA24CE07B100ACCA2A /* AppDelegate.swift */,
@@ -294,6 +305,7 @@
 				75D153BA24CE235000BFE082 /* VideoGamesController.swift in Sources */,
 				755A2BAB24CE07B100ACCA2A /* AppDelegate.swift in Sources */,
 				75FD8FF824CE312100C573E5 /* OperationThreads.swift in Sources */,
+				750F57CF24CE476300E45E28 /* DetailsController.swift in Sources */,
 				75FD8FED24CE258800C573E5 /* protocols.swift in Sources */,
 				755A2BAD24CE07B100ACCA2A /* SceneDelegate.swift in Sources */,
 				75FD8FFC24CE3C2C00C573E5 /* ThreadCell.swift in Sources */,

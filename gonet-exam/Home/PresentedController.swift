@@ -56,9 +56,10 @@ class PresentedController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videogamesView", for: indexPath) as! VideoGamesController
+            cell.MainController = self
             return cell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "threadsView", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "threadsView", for: indexPath) as! ThreadsController
         return cell
     }
 }

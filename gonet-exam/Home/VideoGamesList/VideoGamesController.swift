@@ -38,7 +38,13 @@ extension VideoGamesController: UITableViewDataSource, UITableViewDelegate, Vide
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("segues")
+        let navController = VideoGamesController.mainStoryboard.instantiateViewController(identifier: "details") as! DetailsController
+        navController.modalPresentationStyle = .automatic
+        navController.modalTransitionStyle = .coverVertical
+        if let presenter = MainController {
+            navController.gameData = documentsArray[indexPath.row]
+            presenter.present(navController, animated: true, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
