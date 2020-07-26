@@ -36,7 +36,7 @@ class PresentedController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width
+        let width = collectionView.frame.width
         let height = collectionView.frame.height
         return CGSize(width: width, height: height)
     }

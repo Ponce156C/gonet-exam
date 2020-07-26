@@ -75,6 +75,4 @@ extension ThreadsController: UITableViewDelegate, UITableViewDataSource {
         cell.ThreadTitle.text = threadsArray[indexPath.row]
         return cell
     }
-    
-    
 }
