@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DFCDFE787C8B27AA52E1CE7 /* Pods_gonet_exam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E87359272C740E9271EB87D /* Pods_gonet_exam.framework */; };
 		755A2BAB24CE07B100ACCA2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A2BAA24CE07B100ACCA2A /* AppDelegate.swift */; };
 		755A2BAD24CE07B100ACCA2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A2BAC24CE07B100ACCA2A /* SceneDelegate.swift */; };
 		755A2BB224CE07B100ACCA2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755A2BB024CE07B100ACCA2A /* Main.storyboard */; };
@@ -19,9 +20,15 @@
 		75FD8FEF24CE268200C573E5 /* VideoGamesCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD8FEE24CE268200C573E5 /* VideoGamesCellController.swift */; };
 		75FD8FF124CE284400C573E5 /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD8FF024CE284400C573E5 /* utilities.swift */; };
 		75FD8FF424CE291C00C573E5 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 75FD8FF324CE291C00C573E5 /* Nuke */; };
+		75FD8FF624CE2F8300C573E5 /* ThreadsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD8FF524CE2F8300C573E5 /* ThreadsController.swift */; };
+		75FD8FF824CE312100C573E5 /* OperationThreads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD8FF724CE312100C573E5 /* OperationThreads.swift */; };
+		75FD8FFA24CE3AC600C573E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75FD8FF924CE3AC600C573E5 /* GoogleService-Info.plist */; };
+		75FD8FFC24CE3C2C00C573E5 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD8FFB24CE3C2C00C573E5 /* ThreadCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B82787533DE41DE5F050FCE /* Pods-gonet-exam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gonet-exam.debug.xcconfig"; path = "Target Support Files/Pods-gonet-exam/Pods-gonet-exam.debug.xcconfig"; sourceTree = "<group>"; };
+		3E87359272C740E9271EB87D /* Pods_gonet_exam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gonet_exam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		755A2BA724CE07B100ACCA2A /* gonet-exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gonet-exam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		755A2BAA24CE07B100ACCA2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		755A2BAC24CE07B100ACCA2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +42,11 @@
 		75FD8FEC24CE258800C573E5 /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 		75FD8FEE24CE268200C573E5 /* VideoGamesCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGamesCellController.swift; sourceTree = "<group>"; };
 		75FD8FF024CE284400C573E5 /* utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
+		75FD8FF524CE2F8300C573E5 /* ThreadsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsController.swift; sourceTree = "<group>"; };
+		75FD8FF724CE312100C573E5 /* OperationThreads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationThreads.swift; sourceTree = "<group>"; };
+		75FD8FF924CE3AC600C573E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		75FD8FFB24CE3C2C00C573E5 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
+		8E4EFDED367C2B491EFA5206 /* Pods-gonet-exam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gonet-exam.release.xcconfig"; path = "Target Support Files/Pods-gonet-exam/Pods-gonet-exam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +55,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				75FD8FF424CE291C00C573E5 /* Nuke in Frameworks */,
+				5DFCDFE787C8B27AA52E1CE7 /* Pods_gonet_exam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FDD3AB1DFE479CEA766750C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E87359272C740E9271EB87D /* Pods_gonet_exam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		755A2B9E24CE07B100ACCA2A = {
 			isa = PBXGroup;
 			children = (
 				755A2BA924CE07B100ACCA2A /* gonet-exam */,
 				755A2BA824CE07B100ACCA2A /* Products */,
+				7624568D792382E3EAB15FB8 /* Pods */,
+				3FDD3AB1DFE479CEA766750C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +98,7 @@
 				755A2BAA24CE07B100ACCA2A /* AppDelegate.swift */,
 				755A2BAC24CE07B100ACCA2A /* SceneDelegate.swift */,
 				755A2BB324CE07B400ACCA2A /* Assets.xcassets */,
+				75FD8FF924CE3AC600C573E5 /* GoogleService-Info.plist */,
 				755A2BB824CE07B400ACCA2A /* Info.plist */,
 			);
 			path = "gonet-exam";
@@ -111,6 +135,8 @@
 		755A2BC324CE20DD00ACCA2A /* ThreadList */ = {
 			isa = PBXGroup;
 			children = (
+				75FD8FF524CE2F8300C573E5 /* ThreadsController.swift */,
+				75FD8FFB24CE3C2C00C573E5 /* ThreadCell.swift */,
 			);
 			path = ThreadList;
 			sourceTree = "<group>";
@@ -128,8 +154,18 @@
 			isa = PBXGroup;
 			children = (
 				75FD8FEA24CE251D00C573E5 /* Document.swift */,
+				75FD8FF724CE312100C573E5 /* OperationThreads.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7624568D792382E3EAB15FB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B82787533DE41DE5F050FCE /* Pods-gonet-exam.debug.xcconfig */,
+				8E4EFDED367C2B491EFA5206 /* Pods-gonet-exam.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 755A2BBB24CE07B400ACCA2A /* Build configuration list for PBXNativeTarget "gonet-exam" */;
 			buildPhases = (
+				683D5160A26083EB1959BCDE /* [CP] Check Pods Manifest.lock */,
 				755A2BA324CE07B100ACCA2A /* Sources */,
 				755A2BA424CE07B100ACCA2A /* Frameworks */,
 				755A2BA524CE07B100ACCA2A /* Resources */,
+				8E1A4A2E6B01BE67468AA404 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,12 +235,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				755A2BB724CE07B400ACCA2A /* LaunchScreen.storyboard in Resources */,
+				75FD8FFA24CE3AC600C573E5 /* GoogleService-Info.plist in Resources */,
 				755A2BB424CE07B400ACCA2A /* Assets.xcassets in Resources */,
 				755A2BB224CE07B100ACCA2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		683D5160A26083EB1959BCDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gonet-exam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E1A4A2E6B01BE67468AA404 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gonet-exam/Pods-gonet-exam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gonet-exam/Pods-gonet-exam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gonet-exam/Pods-gonet-exam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		755A2BA324CE07B100ACCA2A /* Sources */ = {
@@ -212,9 +293,12 @@
 				755A2BC224CE14B100ACCA2A /* PresentedController.swift in Sources */,
 				75D153BA24CE235000BFE082 /* VideoGamesController.swift in Sources */,
 				755A2BAB24CE07B100ACCA2A /* AppDelegate.swift in Sources */,
+				75FD8FF824CE312100C573E5 /* OperationThreads.swift in Sources */,
 				75FD8FED24CE258800C573E5 /* protocols.swift in Sources */,
 				755A2BAD24CE07B100ACCA2A /* SceneDelegate.swift in Sources */,
+				75FD8FFC24CE3C2C00C573E5 /* ThreadCell.swift in Sources */,
 				75FD8FEB24CE251D00C573E5 /* Document.swift in Sources */,
+				75FD8FF624CE2F8300C573E5 /* ThreadsController.swift in Sources */,
 				75FD8FF124CE284400C573E5 /* utilities.swift in Sources */,
 				75FD8FEF24CE268200C573E5 /* VideoGamesCellController.swift in Sources */,
 			);
@@ -358,6 +442,7 @@
 		};
 		755A2BBC24CE07B400ACCA2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B82787533DE41DE5F050FCE /* Pods-gonet-exam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +461,7 @@
 		};
 		755A2BBD24CE07B400ACCA2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E4EFDED367C2B491EFA5206 /* Pods-gonet-exam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

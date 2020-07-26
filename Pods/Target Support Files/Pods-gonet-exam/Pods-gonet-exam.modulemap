@@ -1,0 +1,6 @@
+framework module Pods_gonet_exam {
+  umbrella header "Pods-gonet-exam-umbrella.h"
+
+  export *
+  module * { export * }
+}

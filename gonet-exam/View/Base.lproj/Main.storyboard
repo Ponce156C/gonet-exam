@@ -62,7 +62,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="417" height="726"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="g5B-Mg-IbL" customClass="VideoGamesCellController" customModule="gonet_exam" customModuleProvider="target">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoGamesCell" id="g5B-Mg-IbL" customClass="VideoGamesCellController" customModule="gonet_exam" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="417" height="105"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g5B-Mg-IbL" id="Sis-9W-3aG">
@@ -126,7 +126,7 @@
                                             <outlet property="videoGamesTableView" destination="TtE-WN-9dg" id="vxq-3t-fel"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="threadsView" id="4Oq-el-edP">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="threadsView" id="4Oq-el-edP" customClass="ThreadsController" customModule="gonet_exam" customModuleProvider="target">
                                         <rect key="frame" x="427" y="17.5" width="384" height="702"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XMT-gQ-D6H">
@@ -145,6 +145,9 @@
                                                             <state key="normal" image="play" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="startThreads:" destination="4Oq-el-edP" eventType="touchUpInside" id="TGb-iC-u9k"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nO-h0-MOs">
                                                             <rect key="frame" x="50" y="0.0" width="40" height="40"/>
@@ -155,6 +158,9 @@
                                                             <state key="normal" image="trash" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="cleanThreads:" destination="4Oq-el-edP" eventType="touchUpInside" id="QBK-Tm-wgQ"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -162,43 +168,63 @@
                                                     <rect key="frame" x="0.0" y="60" width="384" height="642"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="d2W-CF-sIW">
-                                                            <rect key="frame" x="0.0" y="28" width="384" height="51"/>
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="threadCell" id="d2W-CF-sIW" customClass="ThreadCell" customModule="gonet_exam" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="28" width="384" height="41"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d2W-CF-sIW" id="qZV-Gj-38y">
-                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="51"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="41"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6O8-B7-bOT">
-                                                                        <rect key="frame" x="25" y="15" width="334" height="21"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xz1-mO-TI0">
+                                                                        <rect key="frame" x="25" y="10" width="334" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="6O8-B7-bOT" firstAttribute="leading" secondItem="qZV-Gj-38y" secondAttribute="leading" constant="25" id="Uh7-oT-lnz"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="6O8-B7-bOT" secondAttribute="trailing" constant="25" id="naj-mP-ITg"/>
-                                                                    <constraint firstItem="6O8-B7-bOT" firstAttribute="top" secondItem="qZV-Gj-38y" secondAttribute="top" constant="15" id="tDB-Sy-Ekg"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="6O8-B7-bOT" secondAttribute="bottom" constant="15" id="vDQ-yy-EJA"/>
+                                                                    <constraint firstItem="xz1-mO-TI0" firstAttribute="top" secondItem="qZV-Gj-38y" secondAttribute="top" constant="10" id="RZw-Qc-ugU"/>
+                                                                    <constraint firstItem="xz1-mO-TI0" firstAttribute="leading" secondItem="qZV-Gj-38y" secondAttribute="leading" constant="25" id="fPP-5l-akJ"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="xz1-mO-TI0" secondAttribute="bottom" constant="10" id="kft-rm-uG8"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="xz1-mO-TI0" secondAttribute="trailing" constant="25" id="lx5-xX-Gfq"/>
                                                                 </constraints>
                                                             </tableViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="ThreadTitle" destination="xz1-mO-TI0" id="aun-86-xBZ"/>
+                                                            </connections>
                                                         </tableViewCell>
                                                     </prototypes>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="4Oq-el-edP" id="CPB-IL-nCH"/>
+                                                        <outlet property="delegate" destination="4Oq-el-edP" id="h1B-um-Mt9"/>
+                                                    </connections>
                                                 </tableView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0MG-M9-Jz5">
+                                                    <rect key="frame" x="182" y="341" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="6F1-Ng-A4y" secondAttribute="trailing" id="0Hh-Rn-fpW"/>
                                                 <constraint firstAttribute="bottom" secondItem="6F1-Ng-A4y" secondAttribute="bottom" id="DVp-7x-1uL"/>
                                                 <constraint firstItem="uYB-zb-6ti" firstAttribute="leading" secondItem="XMT-gQ-D6H" secondAttribute="leading" constant="20" id="FGR-5K-P2H"/>
                                                 <constraint firstItem="6F1-Ng-A4y" firstAttribute="top" secondItem="uYB-zb-6ti" secondAttribute="bottom" constant="10" id="GHB-jz-HGk"/>
+                                                <constraint firstItem="0MG-M9-Jz5" firstAttribute="centerX" secondItem="XMT-gQ-D6H" secondAttribute="centerX" id="X98-d6-egF"/>
                                                 <constraint firstItem="6F1-Ng-A4y" firstAttribute="leading" secondItem="XMT-gQ-D6H" secondAttribute="leading" id="bGh-yj-LB8"/>
                                                 <constraint firstItem="uYB-zb-6ti" firstAttribute="top" secondItem="XMT-gQ-D6H" secondAttribute="top" constant="10" id="cJe-Ze-wZz"/>
+                                                <constraint firstItem="0MG-M9-Jz5" firstAttribute="centerY" secondItem="XMT-gQ-D6H" secondAttribute="centerY" id="uaS-sV-QZM"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="384" height="702"/>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="0MG-M9-Jz5" id="ch3-xP-X2t"/>
+                                            <outlet property="threadTableView" destination="6F1-Ng-A4y" id="u4i-Qp-0kg"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ImT-de-TVd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6A9-TH-BMA"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

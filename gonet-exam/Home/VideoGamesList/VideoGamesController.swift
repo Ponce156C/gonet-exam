@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class VideoGamesController: UICollectionViewCell {
     
@@ -15,6 +16,7 @@ class VideoGamesController: UICollectionViewCell {
     weak var MainController: UIViewController?
     
     var documentsArray: [Document] = []
+    var db: Firestore!
     
     static var mainStoryboard: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -23,6 +25,9 @@ class VideoGamesController: UICollectionViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        self.db = Firestore.firestore()
         self.getDocuments()
     }
 }
@@ -43,6 +48,20 @@ extension VideoGamesController: UITableViewDataSource, UITableViewDelegate, Vide
     }
     
     func getDocuments() {
-        print("ad")
+        db.collection("videogames").getDocuments { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    do{
+                        let documentItem = try Document(dictionary: document.data())
+                        self.documentsArray.append(documentItem)
+                    }catch {
+                        print("error")
+                    }
+                }
+                self.videoGamesTableView.reloadData()
+            }
+        }
     }
 }

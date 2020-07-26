@@ -18,3 +18,14 @@ protocol VideoGamesControllerProtocol: class {
 protocol VideoGamesCellControllerProtocol: class {
     func loadData(_ videoGameData: Document)
 }
+
+protocol ThreadsControllerProtocol: class {
+    var mainController: UIViewController? {get set}
+    var threadsArray: [String] {get set}
+    func startThreads(_ sender: UIButton)
+    func cleanThreads(_ sender: UIButton)
+    func hiddeActiviIndicator()
+    func showActivityIndicator()
+    func executeThreads()
+    func presentDataThreads(threadsArray: [String])
+}

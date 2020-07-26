@@ -55,12 +55,10 @@ class PresentedController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videogamesView", for: indexPath)
-            cell.backgroundColor = UIColor.red
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videogamesView", for: indexPath) as! VideoGamesController
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "threadsView", for: indexPath)
-        cell.backgroundColor = UIColor.white
         return cell
     }
 }
