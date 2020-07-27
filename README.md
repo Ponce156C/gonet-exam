@@ -7,12 +7,16 @@ _Involucra distintos conocimientos como hilos, constrains, consumo de datos desd
 
 ### Librerias de terceros utilizadas 📋
 
-_Nuke, firebase y firestore_
+_Con Cocoapods_
 
 ```
-Da un ejemplo
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
 ```
-
+_Con Swift Package Manager_
+```
+  Nuke
+```
 ## Autor ✒️
 
 * **Carlos Andrés Ponce Flores** - *Desarrollador iOS* - [PonceDev](https://github.com/Ponce156C)
