@@ -23,7 +23,7 @@ _Con Swift Package Manager_
 
 ## Expresiones de Gratitud 🎁
 
-* Invitame una cheve 🍺 o un café ☕, yo se que quieres 😏. 
+* Invitame una cheve 🍺 y a colaborar contigo 👨🏻‍💻. 
 
 ---
 ⌨️ con ❤️ por [PonceDev](https://github.com/Ponce156C) 😊
